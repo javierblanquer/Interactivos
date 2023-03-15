@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Geometry Learn</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <a-scene
+      hit-test-system="reticle: #reticle;" 
+      webxr="requiredFeatures: dom-overlay, local-floor; overlayElement: #overlay;"
+    >
+    <a-entity id="reticle" >
+      <a-plane
+      color="teal"
+      width="0.4"
+      height="0.4"
+      rotation="-90 0 0"
+      material="src: #grid-texture; transparent: true; opacity: 0.6;"
+    ></a-plane>
+  <a-entity>
+    </a-scene>
+    <div id="overlay">
+      <button id="btn-sphere">
+        Create a <span id="spherecreation">SPHERE</span>
+      </button>
+      <button id="btn-cylinder">
+        Create a <span id="spherecreation">CYLINDER</span>
+      </button>
+      <button id="btn-cone">
+        Create a <span id="spherecreation">CONE</span>
+      </button>
+    </div>
+  </body>
+</html>
